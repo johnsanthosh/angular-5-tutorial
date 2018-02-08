@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <input type="text" class="form-control" [(ngModel)]="username" (input)="checkIfUsernameEmpty()">
+  </div>
+  <div class="row">
+    <button class="btn btn-primary" [disabled]="isUsernameEmpty" (click)="resetUsername()">Reset</button>
+  </div>
+  <div class="row">
+    <p>{{ username }}</p>
+  </div>
+</div>
