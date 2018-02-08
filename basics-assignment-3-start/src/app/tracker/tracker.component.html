@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ul>
+        <button class="btn btn-primary" (click)="onClickDisplayDetails()">Display Details</button>
+      </ul>
+      <ul>
+        <p [ngClass]="{hidden: isMessageHidden}">Secret Password = tuna</p>
+      </ul>
+      <ul *ngFor="let log of logs; let i = index">
+        <p [ngStyle]="{backgroundColor: i >=5 ? 'blue' : 'transparent' }" [ngClass]="{'color-white': i >=5}">{{ log }}</p>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
